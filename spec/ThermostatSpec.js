@@ -43,6 +43,21 @@ describe("Thermostat", function(){
         expect(thermostat.up(13)).toEqual(32)
         });
     });
+
+    describe("switching power saver mode",function(){
+
+      it("to false",function(){
+        thermostat.powerSaverMode()
+        expect(thermostat.isInPowerSaverMode).toEqual(false)
+      });
+
+      it("to false, then back to try",function(){
+        thermostat.powerSaverMode()
+        thermostat.powerSaverMode()
+        expect(thermostat.isInPowerSaverMode).toEqual(true)
+      });
+    });
+
     describe("hit a reset button:",function(){
       it("that resets temperature back to 20",function(){
         expect(thermostat.reset()).toEqual(this.DEFAULT_TEMP)
@@ -64,5 +79,5 @@ describe("Thermostat", function(){
         expect(thermostat.energyReport()).toEqual('high-usage')
       });
     });
-    
+
 });

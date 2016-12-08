@@ -1,5 +1,4 @@
 var Thermostat = function() {
-  const DEFAULT_TEMP = 20;
   this.currentTemperature = DEFAULT_TEMP;
   this.isInPowerSaverMode = true;
 };
@@ -27,8 +26,8 @@ Thermostat.prototype.down = function(number) {
   }
 };
 
-Thermostat.prototype.reset = function() {
-  this.currentTemperature = this.DEFAULT_TEMP;
+Thermostat.prototype.resetTemperature = function() {
+  this.currentTemperature = DEFAULT_TEMP;
   return this.currentTemperature;
 };
 
@@ -41,3 +40,12 @@ Thermostat.prototype.energyReport = function() {
     return 'medium-usage';
   }
 };
+
+Thermostat.prototype.powerSaverMode = function() {
+  if(this.isInPowerSaverMode){
+    return this.isInPowerSaverMode = false;
+  } else {
+    return this.isInPowerSaverMode = true;
+  }
+};
+const DEFAULT_TEMP = 20;
