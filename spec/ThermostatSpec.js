@@ -35,6 +35,13 @@ describe("Thermostat", function(){
       it("should have a maximum temperature of 25 degrees", function() {
         expect(thermostat.up(6)).toEqual(25)
       });
+
+      it("temperature should not be above 25 degrees", function() {
+        thermostat.powerSaverMode()
+        thermostat.up(10);
+        thermostat.powerSaverMode()
+        expect(thermostat.currentTemperature).toEqual(25)
+      })
     });
     describe("when power saver mode is off",function(){
 
@@ -43,6 +50,7 @@ describe("Thermostat", function(){
         expect(thermostat.up(13)).toEqual(32)
         });
     });
+
 
     describe("switching power saver mode",function(){
 
@@ -60,7 +68,7 @@ describe("Thermostat", function(){
 
     describe("hit a reset button:",function(){
       it("that resets temperature back to 20",function(){
-        expect(thermostat.reset()).toEqual(this.DEFAULT_TEMP)
+        expect(thermostat.resetTemperature()).toEqual(this.DEFAULT_TEMP)
       });
     });
 

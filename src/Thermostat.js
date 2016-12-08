@@ -27,7 +27,7 @@ Thermostat.prototype.down = function(number) {
 };
 
 Thermostat.prototype.resetTemperature = function() {
-  this.currentTemperature = DEFAULT_TEMP;
+  this.currentTemperature = this.DEFAULT_TEMP;
   return this.currentTemperature;
 };
 
@@ -44,6 +44,9 @@ Thermostat.prototype.energyReport = function() {
 Thermostat.prototype.powerSaverMode = function() {
   if(this.isInPowerSaverMode){
     return this.isInPowerSaverMode = false;
+  } else if (this.currentTemperature > 25 && this.isInPowerSaverMode === false) {
+      return this.currentTemperature = 25;
+      return this.isInPowerSaverMode = true;
   } else {
     return this.isInPowerSaverMode = true;
   }
