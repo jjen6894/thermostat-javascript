@@ -10,22 +10,16 @@
 <body>
 
   <div id='thermostat'>
+    <div id='temperature'>
+      <button type='button' id='temp-up' > + </button>
+      <button type='button' id='temp-down'> - </button>
+    </div>
     <div id='display'>
       <div id='city-temperature'></div>
       <div id='room-temperature'></div>
     </div>
   </div>
   <div id='controls'>
-  <div id='temperature'>
-    Temperature
-    <!-- <script>
-    $(".dial").knob({
-      'controls' : function(v) { console.log(v); }
-    });
-    </script> -->
-    <button type='button' id='temp-up' > + </button>
-    <button type='button' id='temp-down'> - </button>
-  </div>
   <div id='reset'>
     <button type='button' id='reset'> Reset </button>
   </div>
@@ -44,13 +38,6 @@
   </section>
   </div>
 </div>
-<!-- <div id="thermostat">
-  <div id="display">
-    <div id="city-temperature"></div>
-    <div id="room-temperature"></div>
-  </div>
-</div> -->
-
 
 <script src="src/thermostat.js"></script>
 <script src="js/jquery.js"></script>

@@ -1,3 +1,19 @@
+#temp-up {
+  position: relative;
+  float: right;
+  height: 50px;
+  margin: 240px 50px 50px 50px;
+  background-color: #818894;
+  border-radius: 50%;
+}
+#temp-down {
+  margin: 240px 50px 50px 50px;
+  position: relative;
+  float: left;
+  height: 50px;
+  background-color: #818894;
+  border-radius: 50%;
+}
 #city-temperature {
   line-height: 150px;
   font-size: 20pt;
@@ -50,10 +66,6 @@
   padding: 0px;
   height: 250px;
 }
-
-/*line-height: 700%*/
-
-
 
 #reset {
   margin-bottom: 5px;

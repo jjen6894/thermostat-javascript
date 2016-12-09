@@ -25,18 +25,23 @@ Thermostat.prototype.reset = function(){
 Thermostat.prototype.setPowerSaving = function(boolean) {
   this.powerSaving = boolean;
 }
+Thermostat.prototype.changeTemp = function(value) {
+  if(value > 10 && value < 32){
+    return this.degrees = value
+  }
+}
 
 Thermostat.prototype.checkMaxMin = function() {
-  const MAXIMUM_TEMPERATURE = 32;
+  const MAXIMUM_TEMPERATURE = 33;
   const POWER_SAVING_MAXIMUM_TEMPERATURE = 25;
-  const MINIMUM_TEMPERATURE = 10;
+  const MINIMUM_TEMPERATURE = 9;
   if (this.degrees >= POWER_SAVING_MAXIMUM_TEMPERATURE && this.powerSaving === true) {
     throw new Error("Power saving on. Maximum temperature reached.");
   }
-  if (this.degrees >= MAXIMUM_TEMPERATURE && this.powerSaving === false) {
+  if (this.degrees > MAXIMUM_TEMPERATURE && this.powerSaving === false) {
     throw new Error("Power saving off. Maximum temperature reached.")
   }
-  if (this.degrees <= MINIMUM_TEMPERATURE) {
+  if (this.degrees < MINIMUM_TEMPERATURE) {
     throw new Error("Temperature cannot be decreased any further.");
   }
 };
