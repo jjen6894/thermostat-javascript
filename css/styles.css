@@ -1,0 +1,46 @@
+#thermostat {
+  font-family: "Lucida Console", Monaco5, monospace;
+  height: 150px;
+  width: 400px;
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 25px;
+}
+
+#display {
+  width: 70%;
+  padding: 5px;
+  border: 2px solid darkgreen;
+  background-color: palegreen;
+  float: left;
+}
+
+#controls {
+  font-size: 8pt;
+  width: 20%;
+  padding: 0 10px 0 10px;
+  float: right;
+}
+
+#reset {
+  margin-bottom: 5px;
+}
+
+.blue {
+  font-weight: bold;
+  color: blue;
+}
+
+.high-usage {
+  color: red;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.low-usage {
+  color: darkgreen;
+}
