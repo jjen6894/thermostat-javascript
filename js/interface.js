@@ -3,7 +3,7 @@ $( document ).ready(function(){
 
   var updateDisplay = function() {
     $('#room-temperature').text(thermostat.degrees + "c");
-    $('#room-temperature').attr('class', thermostat.usage);
+    $('#display').attr('class', thermostat.usage);
   };
 
   var showActive = function(button) {

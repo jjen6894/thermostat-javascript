@@ -9,12 +9,12 @@
 
 <body>
 
-  <div id='thermostat'>
+  <!-- <div id='thermostat'>
     <div id='display'>
       <div id='room-temperature'></div>
       <div id='city-temperature'></div>
     </div>
-    <div id='controls'>
+      <div id='controls'>
       <div id='temperature'>
         Temperature
         <button type='button' id='temp-up' > + </button>
@@ -28,17 +28,24 @@
         <br />
         <button type='button' id='power-saving-on'> On </button>
         <button type='button' id='power-saving-off'> Off </button>
+        <section>
+        <select id="current-city">
+          <option value="london">London</option>
+          <option value="newyork">New York</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+      </section>
       </div>
     </div>
-    <section>
-    <select id="current-city">
-      <option value="london">London</option>
-      <option value="newyork">New York</option>
-      <option value="paris">Paris</option>
-      <option value="tokyo">Tokyo</option>
-    </select>
-  </section>
+</div> -->
+<div id="thermostat">
+  <div id="display">
+    <div id="city-temperature"></div>
+    <div id="room-temperature"></div>
+  </div>
 </div>
+
 
 <script src="src/thermostat.js"></script>
 <script src="js/jquery.js"></script>
