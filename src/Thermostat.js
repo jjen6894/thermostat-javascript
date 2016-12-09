@@ -27,7 +27,7 @@ Thermostat.prototype.down = function(number) {
 };
 
 Thermostat.prototype.resetTemperature = function() {
-  this.currentTemperature = this.DEFAULT_TEMP;
+  this.currentTemperature = 20;
   return this.currentTemperature;
 };
 
