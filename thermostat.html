@@ -9,47 +9,53 @@
 
 <body>
 
-  <!-- <div id='thermostat'>
+  <div id='thermostat'>
     <div id='display'>
-      <div id='room-temperature'></div>
       <div id='city-temperature'></div>
+      <div id='room-temperature'></div>
     </div>
-      <div id='controls'>
-      <div id='temperature'>
-        Temperature
-        <button type='button' id='temp-up' > + </button>
-        <button type='button' id='temp-down'> - </button>
-      </div>
-      <div id='reset'>
-        <button type='button' id='reset'> Reset </button>
-      </div>
-      <div id='power saving'>
-        Power Saving
-        <br />
-        <button type='button' id='power-saving-on'> On </button>
-        <button type='button' id='power-saving-off'> Off </button>
-        <section>
-        <select id="current-city">
-          <option value="london">London</option>
-          <option value="newyork">New York</option>
-          <option value="paris">Paris</option>
-          <option value="tokyo">Tokyo</option>
-        </select>
-      </section>
-      </div>
-    </div>
-</div> -->
-<div id="thermostat">
+  </div>
+  <div id='controls'>
+  <div id='temperature'>
+    Temperature
+    <!-- <script>
+    $(".dial").knob({
+      'controls' : function(v) { console.log(v); }
+    });
+    </script> -->
+    <button type='button' id='temp-up' > + </button>
+    <button type='button' id='temp-down'> - </button>
+  </div>
+  <div id='reset'>
+    <button type='button' id='reset'> Reset </button>
+  </div>
+  <div id='power saving'>
+    Power Saving
+    <br />
+    <button type='button' id='power-saving-on'> On </button>
+    <button type='button' id='power-saving-off'> Off </button>
+    <section>
+    <select id="current-city">
+      <option value="london">London</option>
+      <option value="newyork">New York</option>
+      <option value="paris">Paris</option>
+      <option value="tokyo">Tokyo</option>
+    </select>
+  </section>
+  </div>
+</div>
+<!-- <div id="thermostat">
   <div id="display">
     <div id="city-temperature"></div>
     <div id="room-temperature"></div>
   </div>
-</div>
+</div> -->
 
 
 <script src="src/thermostat.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/interface.js"></script>
+<script src="js/jquery-knob.js"></script>
 
 </body>
 </html>

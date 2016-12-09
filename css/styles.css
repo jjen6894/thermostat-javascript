@@ -23,8 +23,6 @@
   background-color: #2C2D2F;
   border: 2px solid black;
   border-radius: 50%;
-  /*padding: 25px;
-  margin: 25px;*/
   position: relative;
   color: white;
 }
@@ -42,12 +40,14 @@
 
 }
 #controls {
+  float: right;
+  border: 3px solid #A5AAB4;
+  background-color: #A5AAB4;
   top: 50%;
   left: 50%;
   font-size: 8pt;
   width: 250px;
   padding: 0px;
-  position: absolute;
   height: 250px;
 }
 
